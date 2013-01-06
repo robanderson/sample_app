@@ -1,0 +1,170 @@
+have_type: checking for rb_pid_t in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -Wl,-R/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/usr/lib -Wl,-R/home/robanderson/.rvm/usr/lib -L. -L/usr/local/lib -rdynamic -L/home/robanderson/.rvm/usr/lib  -Wl,-R/home/robanderson/.rvm/usr/lib      -Wl,-R -Wl,/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -lruby  -lexecinfo -lthr -lrt -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: typedef rb_pid_t conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lkvm... -------------------- yes
+
+"gcc -o conftest -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -Wl,-R/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/usr/lib -Wl,-R/home/robanderson/.rvm/usr/lib -L. -L/usr/local/lib -rdynamic -L/home/robanderson/.rvm/usr/lib  -Wl,-R/home/robanderson/.rvm/usr/lib      -Wl,-R -Wl,/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -lruby -lkvm  -lexecinfo -lthr -lrt -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for kvm_openfiles()... -------------------- yes
+
+"gcc -o conftest -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -Wl,-R/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/usr/lib -Wl,-R/home/robanderson/.rvm/usr/lib -L. -L/usr/local/lib -rdynamic -L/home/robanderson/.rvm/usr/lib  -Wl,-R/home/robanderson/.rvm/usr/lib     -lkvm  -Wl,-R -Wl,/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -lruby -lkvm  -lexecinfo -lthr -lrt -lcrypt -lm   -lc"
+conftest.c: In function 't':
+conftest.c:5: error: 'kvm_openfiles' undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))kvm_openfiles; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -Wl,-R/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/usr/lib -Wl,-R/home/robanderson/.rvm/usr/lib -L. -L/usr/local/lib -rdynamic -L/home/robanderson/.rvm/usr/lib  -Wl,-R/home/robanderson/.rvm/usr/lib     -lkvm  -Wl,-R -Wl,/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -L/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/lib -lruby -lkvm  -lexecinfo -lthr -lrt -lcrypt -lm   -lc"
+conftest.c: In function 't':
+conftest.c:5: warning: implicit declaration of function 'kvm_openfiles'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { kvm_openfiles(); return 0; }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct kinfo_proc.kp_proc in sys/user.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: 'struct kinfo_proc' has no member named 'kp_proc'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/user.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct kinfo_proc*)0)->kp_proc - (char *)0;
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct kinfo_proc.kp_eproc in sys/user.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: 'struct kinfo_proc' has no member named 'kp_eproc'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/user.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct kinfo_proc*)0)->kp_eproc - (char *)0;
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct kinfo_proc.u_kproc in sys/user.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: 'struct kinfo_proc' has no member named 'u_kproc'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/user.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct kinfo_proc*)0)->u_kproc - (char *)0;
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct eproc.e_stats in sys/sysctl.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: dereferencing pointer to incomplete type
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/sysctl.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct eproc*)0)->e_stats - (char *)0;
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct eproc.p_oncpu in sys/sysctl.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: dereferencing pointer to incomplete type
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/sysctl.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct eproc*)0)->p_oncpu - (char *)0;
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct eproc.p_runtime in sys/sysctl.h... -------------------- no
+
+"gcc -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/x86_64-freebsd9.1 -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1/ruby/backward -I/home/robanderson/.rvm/rubies/ruby-1.9.3-p362/include/ruby-1.9.1 -I. -I/usr/local/include   -I/home/robanderson/.rvm/usr/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7: error: dereferencing pointer to incomplete type
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/sysctl.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int s = (char *)&((struct eproc*)0)->p_runtime - (char *)0;
+/* end */
+
+--------------------
+
